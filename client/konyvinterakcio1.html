@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+	
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="hu-hu" />
+	
+		<title>Konyveim</title>	    
+	    
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection"/>
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"/>    
+		<!--[if IE]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->		
+
+	    <link rel="stylesheet" href="css/iwiw.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	    <link rel="stylesheet" href="css/p2pbooks.structure.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	    <link rel="stylesheet" href="css/p2pbooks.pastel.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+
+	    
+	    <script type="text/javascript" src="js/jquery.pack.js"></script>
+
+	    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+
+	    <script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
+
+	    <script type="text/javascript" src="js/utils.js"></script>
+		
+	    <script type="text/javascript" src="js/requests.js"></script>
+<!--	    <script type="text/javascript" src="js/p2pbooks.js"></script>-->
+
+		<script type="text/javascript">
+			var book = { cover: 'http://ecx.images-amazon.com/images/I/51K3p0CsaxL._SL500_PIsitb-sticker-arrow-big,TopRight,35,-73_OU01_SS75_.jpg', author: "Kate Morton", title: "The Forgotten Garden" };
+			
+			
+		</script>
+		
+		<style type="text/css">
+			.bookCnt { float: left; width: 100px; padding: 10px; }
+			.bookCnt img { float: left; margin-right: 10px; }
+			.active { width: 250px; height: 110px; }
+			.active { background: #ddd; }
+			.title { display: block;}
+			
+			
+			.bookInfo { display: none; }
+			.bookFunctions { display: none; }
+			
+			.active .bookInfo { display: block; }
+			.active .bookFunctions { display: block; clear: both; padding-top: 10px;}
+		</style>
+	</head>
+	<body>
+	
+		<div class="bookCnt"></div>
+		<div class="bookCnt"></div>
+		<div class="bookCnt"></div>
+		<div class="bookCnt"></div>
+		<div class="bookCnt"></div>
+		
+		<script type="text/javascript">
+		
+			$( function ()
+			{
+				$("<img/>").attr({ src: book.cover }).appendTo(".bookCnt");
+				
+				var author = $("<span/>").html(book.author).addClass("author"),
+					title = $("<span/>").html(book.title).addClass("title"),
+					kolcsonad = $("<a/>").attr("href","#").html("Kolcsonad").addClass("kolcsonadButton");
+					
+				$("<div/>").addClass("bookInfo").append(author).append(title).appendTo(".bookCnt");
+				$("<div/>").addClass("bookFunctions").append(kolcsonad).appendTo(".bookCnt");
+
+
+					$(".bookCnt").mouseenter( function (event)
+					{
+
+						$(".active").animate({ width: "100px", height: "90px"}, "fast", function ()
+						{
+							//$(event.currentTarget).addClass("active");
+							$(this).removeClass("active");
+						});
+						
+						
+						$(event.currentTarget).animate({ width: "250px", height: "110px"}, "fast", function ()
+						{
+							$(event.currentTarget).addClass("active");
+						});
+					});
+					
+					$(".bookCnt").mouseleave( function (event)
+					{
+
+						$(event.currentTarget).removeClass("active");
+						$(event.currentTarget).animate({ width: "100px", height: "90px"}, "fast", function ()
+						{
+							//$(event.currentTarget).addClass("active");
+							$(this).removeClass("active");
+						});
+					});
+									
+				
+				
+			});
+		
+		</script>
+	</body>
+</html>

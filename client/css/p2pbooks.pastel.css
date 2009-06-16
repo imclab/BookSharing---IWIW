@@ -1,0 +1,20 @@
+#p2pbooks { background: #d8e4fa;	}
+
+#p2pbooks .window 
+{ 
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+/* extends .window */
+#p2pbooks .contentWindow
+{
+	background: #fff;
+}
+
+
+#p2pbooks .bookCnt .active { background: #d8eafa; }
+#p2pbooks .bookCnt .active .commands  
+{ 
+    background: #d8eafa;
+}

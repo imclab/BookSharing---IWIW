@@ -1,0 +1,48 @@
+#p2pbooks {	padding: 10px; }
+
+#p2pbooks h2 { margin-top: 0px; }
+#p2pbooks input[type=submit] { float: none; }
+#p2pbooks .searchField { width: 300px; }
+
+#p2pbooks .addNewBook label { display: none; }
+#p2pbooks .addNewBook input[type=text] { float: left; width: 160px; margin-left: 10px; display: block; }
+#p2pbooks .addNewBook input[type=submit] { float: left; clear: none; }
+
+#p2pbooks .window
+{ 
+	padding: 10px;
+	padding-top: 10px;
+	margin: 10px;
+}
+
+
+
+
+
+#p2pbooks .bookCnt { position:  relative;}
+#p2pbooks .bookCnt .book 
+{ 
+    float: left; 
+    width: 200px; 
+    height: 120px; 
+    padding-right: 0px; 
+    margin: 0px;
+    position: relative;
+}
+
+#p2pbooks .bookCnt .book .thumb { float: left; margin-right: 10px; }
+#p2pbooks .bookCnt .book .desc {  }
+#p2pbooks .bookCnt .book .desc .author { display: block; }
+#p2pbooks .bookCnt .book .commands  { display: none; }
+
+
+#p2pbooks .bookCnt .active .commands  
+{ 
+    left: 10px;
+    position: absolute;
+    clear: left;
+    display: block; 
+    padding: 10px;
+    opacity: 0.9;
+}
+#p2pbooks .bookCnt .active .commands a { display: block; }

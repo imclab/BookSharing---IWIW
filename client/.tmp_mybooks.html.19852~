@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+	
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="hu-hu" />
+	
+		<title>Konyveim</title>	    
+	    
+		<link rel="stylesheet" href="http://yikulju.com/iwiw/p2pbook/css/blueprint/screen.css" type="text/css" media="screen, projection"/>
+		<link rel="stylesheet" href="http://yikulju.com/iwiw/p2pbook/css/blueprint/print.css" type="text/css" media="print"/>    
+	    <link rel="stylesheet" href="http://yikulju.com/iwiw/p2pbook/css/iwiw.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	    <link rel="stylesheet" href="http://yikulju.com/iwiw/p2pbook/css/p2pbooks.structure.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	    <link rel="stylesheet" href="http://yikulju.com/iwiw/p2pbook/css/p2pbooks.pastel.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<!--		
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection"/>
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"/>    
+	    <link rel="stylesheet" href="css/iwiw.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	    <link rel="stylesheet" href="css/p2pbooks.structure.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	    <link rel="stylesheet" href="css/p2pbooks.pastel.css" type="text/css" media="screen" title="no title" charset="utf-8">
+-->
+
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+	    
+
+
+	    <script type="text/javascript" src="http://yikulju.com/iwiw/p2pbook/js/jquery.jeditable.mini.js"></script>
+		<script type="text/javascript" src="http://yikulju.com/iwiw/p2pbook/js/jquery.inputlabel.js"></script>		
+	    <script type="text/javascript" src="http://yikulju.com/iwiw/p2pbook/js/requests.js"></script>
+	    <script type="text/javascript" src="http://yikulju.com/iwiw/p2pbook/js/p2pbooks.js"></script>
+
+<!--
+	    <script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
+		<script type="text/javascript" src="js/jquery.inputlabel.js"></script>		
+	    <script type="text/javascript" src="js/requests.js"></script>
+	    <script type="text/javascript" src="js/p2pbooks.js"></script>
+-->
+	    	    
+	</head>
+	<body class="container">
+	
+		<div id="p2pbooks" class="span-17">
+			<h1>P2P Booksharing</h1>
+		
+			<div class="window">
+			<strong>Mi a P2P Booksharing?</strong>
+			<p>Nem minden könyvet akar az ember megvenni, hiszen olvasás előtt nehezen eldönthető, hogy egy könyv van-e annyira jó/fontos, hogy az ember pénzt áldozzon rá, majd a lakásában őrizgesse évekig. Gyakran célszerűbb könyvtárból kikölcsönözni vagy ismerősöktől kölcsönkérni egy könyvet. Milyen megoldással lehet a kettőt egymáshoz közelíteni, vagyis az ismerősök közötti könyvkölcsönzést (peer-to-peer book sharing) intézményesíteni?</p>
+			</div>			
+			
+			<div class="searchBooks contentWindow window clearfix">
+				<h2>Kereses</h2>
+				<form class="searchBook">
+					<input type="text" class="searchField" value="Könyv keresése szerző, cím alapján..."></input>
+					<input type="submit" value="Kereses"></input>
+				</form>
+				<div class="bookCnt clearfix">
+				</div>
+			</div>
+					
+			<br/>
+			
+			<div class="myBooks contentWindow window clearfix">
+				<h2>Konyveim</h2>	
+			
+				<div class="bookCnt clearfix">
+				</div>
+	
+			</div>
+			
+			<div class="contentWindow window clearfix">
+				<h2>Uj konyv felvitele</h2>			
+				<form class="addNewBook">
+			
+					<label for="bookAuthor">szerzo</label>
+					<input id="bookAuthor" type="text" value="szerzo"/>
+				
+					<label for="bookTitle">cim</label>
+					<input id="bookTitle" type="text" value="cim"/>
+			
+					<label for="bookISBN">ISBN</label>
+					<input id="bookISBN" type="text" value="ISBN"/>
+					
+					<input type="submit" value="Hozzaad"></input>
+				</form>
+			</div>
+			
+			
+					
+		</div>
+		
+		
+	</body>
+</html>
